@@ -9,9 +9,16 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-            }
-        }
-    }
+
+           }
+       }
+	   stage('deploy') {
+            steps {
+                echo 'deploy...'
+
+           }
+       }
+
     post {
         always {
             echo 'Cleaning up...'
